@@ -10,6 +10,8 @@
 
 #import <parse/parse.h>
 
+NSMutableArray *Lugares;
+
 @interface AddToParse ()
 
 @end
@@ -19,11 +21,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self getAllValues];
+    
+    NSLog(@"%d", (int)[Lugares count]);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) getAllValues{
+    NSLog(@"Llamada al metodo getAllValues");
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Lugar"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        
+        for(id obj in objects){
+            NSLog(@"%@", obj[@"name"]);
+            [Lugares addObject:obj];
+        }
+    }];
+    
 }
 
 - (IBAction)btnEnviar:(id)sender {
