@@ -33,6 +33,9 @@
 		F208E29B1A8DEE09000C890F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E29A1A8DEE09000C890F /* CFNetwork.framework */; };
 		F208E29D1A8DEE1C000C890F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E29C1A8DEE1C000C890F /* UIKit.framework */; };
 		F208E29F1A8DEE2A000C890F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F208E29E1A8DEE2A000C890F /* Foundation.framework */; };
+		F2F46CCE1A906C2F0062B617 /* UseFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F46CCD1A906C2F0062B617 /* UseFile.m */; };
+		F2F46CD01A906CE00062B617 /* archivo.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2F46CCF1A906CE00062B617 /* archivo.txt */; };
+		F2F46CD41A9070FF0062B617 /* monica.png in Resources */ = {isa = PBXBuildFile; fileRef = F2F46CD31A9070FF0062B617 /* monica.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,10 @@
 		F208E29A1A8DEE09000C890F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F208E29C1A8DEE1C000C890F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F208E29E1A8DEE2A000C890F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F2F46CCC1A906C2F0062B617 /* UseFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseFile.h; sourceTree = "<group>"; };
+		F2F46CCD1A906C2F0062B617 /* UseFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseFile.m; sourceTree = "<group>"; };
+		F2F46CCF1A906CE00062B617 /* archivo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = archivo.txt; sourceTree = "<group>"; };
+		F2F46CD31A9070FF0062B617 /* monica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monica.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +146,14 @@
 		F208E2511A8DE6FD000C890F /* UseParse */ = {
 			isa = PBXGroup;
 			children = (
+				F2F46CD31A9070FF0062B617 /* monica.png */,
+				F2F46CCF1A906CE00062B617 /* archivo.txt */,
 				F208E2561A8DE6FD000C890F /* AppDelegate.h */,
 				F208E2571A8DE6FD000C890F /* AppDelegate.m */,
 				F208E2591A8DE6FD000C890F /* AddToParse.h */,
 				F208E25A1A8DE6FD000C890F /* AddToParse.m */,
+				F2F46CCC1A906C2F0062B617 /* UseFile.h */,
+				F2F46CCD1A906C2F0062B617 /* UseFile.m */,
 				F208E25C1A8DE6FD000C890F /* Main.storyboard */,
 				F208E25F1A8DE6FD000C890F /* Images.xcassets */,
 				F208E2611A8DE6FD000C890F /* LaunchScreen.xib */,
@@ -293,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F208E25E1A8DE6FD000C890F /* Main.storyboard in Resources */,
+				F2F46CD01A906CE00062B617 /* archivo.txt in Resources */,
+				F2F46CD41A9070FF0062B617 /* monica.png in Resources */,
 				F208E2631A8DE6FD000C890F /* LaunchScreen.xib in Resources */,
 				F208E2601A8DE6FD000C890F /* Images.xcassets in Resources */,
 			);
@@ -313,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F208E25B1A8DE6FD000C890F /* AddToParse.m in Sources */,
+				F2F46CCE1A906C2F0062B617 /* UseFile.m in Sources */,
 				F208E2581A8DE6FD000C890F /* AppDelegate.m in Sources */,
 				F208E2551A8DE6FD000C890F /* main.m in Sources */,
 			);

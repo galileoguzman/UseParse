@@ -25,8 +25,8 @@
      */
     
     // Your Parse credentials:
-    [Parse setApplicationId:@"YourAppID"
-                  clientKey:@"YourKey"];
+    [Parse setApplicationId:@"xBCjEXeDGNhbhgDMOoDcd8cWvzWAH2mfS23oBrhX"
+                  clientKey:@"tsLtyHtyjPHW3mJvvSrKyw9ibevskxlhc3945Bms"];
     
     // Override point for customization after application launch.
     

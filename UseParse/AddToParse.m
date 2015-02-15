@@ -22,29 +22,22 @@ NSMutableArray *Lugares;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self getAllValues];
+    Lugares = [[NSMutableArray alloc] init];
     
-    NSLog(@"%d", (int)[Lugares count]);
+    PFQuery *query = [PFQuery queryWithClassName:@"bar"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        for (id obj in objects){
+            [Lugares addObject:obj];
+        }
+    }];
+    
+    NSLog(@"Rows : %d", (int)[Lugares count]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) getAllValues{
-    NSLog(@"Llamada al metodo getAllValues");
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Lugar"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
-        
-        for(id obj in objects){
-            NSLog(@"%@", obj[@"name"]);
-            [Lugares addObject:obj];
-        }
-    }];
-    
 }
 
 - (IBAction)btnEnviar:(id)sender {
